@@ -1,3 +1,5 @@
+require 'pry'
+
 class User
 
     attr_accessor :name, :age, :location, :user_name
@@ -16,3 +18,14 @@ twitter_user = {
     age: 26, 
     location: "NY, NY"
 }
+
+new_twitter_user = {
+    name: "Sophie", 
+    user_name: "sm_debenedetto", 
+    location: "NY, NY"
+}
+
+# sophie = User.new(twitter_user)
+sophie = User.new(new_twitter_user)
+
+binding.pry
