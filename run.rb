@@ -2,10 +2,12 @@ require 'pry'
 
 class User
 
-    attr_accessor :name, :age, :location, :user_name, :bio
+    # attr_accessor :name, :age, :location, :user_name, :bio
 
     def initialize(attributes)
         attribute.each do |key, value|
+            # Create a getter and setter by calling the attr_accessor method
+            self.class.attr_accessor(key)
             self.send("#{key}=", value)
         end
     end
